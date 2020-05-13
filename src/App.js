@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import APOD from './components/APOD'
+import Header from './components/Header'
 import { BASE_URL, API_KEY } from './constants'
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header date={data.date}/>
       <APOD title={data.title} imgUrl={data.url} explanation={data.explanation}/>
     </div>
   );
