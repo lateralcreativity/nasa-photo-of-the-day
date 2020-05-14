@@ -18,7 +18,7 @@ function App() {
       debugger
     })
   }, [])
-
+  if (!data.url) return <h3 className="loading">Loading...</h3>
   return (
     <div className="App">
       <Header date={data.date}/>
